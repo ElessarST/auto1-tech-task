@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { CssBaseline, Divider, ThemeProvider } from '@mui/material';
+import { Routes, Route } from 'react-router-dom';
+import { theme } from './theme/theme';
+import Home from './pages/Home/Home';
+import CarDetails from './pages/CarDetails';
+import NotFound from './pages/NotFound';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
+import Main from './layout/Main';
+import LayoutWrapper from './layout/LayoutWrapper';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <LayoutWrapper>
+        <Header />
+        <Divider variant="fullWidth" />
+        <Main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="details" element={<CarDetails />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Main>
+        <Divider variant="fullWidth" />
+        <Footer />
+      </LayoutWrapper>
+    </ThemeProvider>
   );
 }
 
