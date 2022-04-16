@@ -1,15 +1,24 @@
-import React, { Component } from 'react';
-import { Grid } from '@mui/material';
+import React from 'react';
+import { Container, Grid } from '@mui/material';
+import Cars from './Cars';
+import Filters from './Filters/Filters';
+import { FiltersProvider } from './Filters/FiltersContext';
 
-class Home extends Component {
-  render() {
-    return (
-      <Grid container spacing={3}>
-        <Grid item>Filters</Grid>
-        <Grid item>Cars</Grid>
-      </Grid>
-    );
-  }
-}
+const Home = () => {
+  return (
+    <FiltersProvider>
+      <Container>
+        <Grid container spacing={3}>
+          <Grid item>
+            <Filters />
+          </Grid>
+          <Grid item flex={1}>
+            <Cars />
+          </Grid>
+        </Grid>
+      </Container>
+    </FiltersProvider>
+  );
+};
 
 export default Home;

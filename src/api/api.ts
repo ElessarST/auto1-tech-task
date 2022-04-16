@@ -15,8 +15,14 @@ const instance = axios.create({
   timeout: 30000,
 });
 
-export function getCars(): Promise<GetCarsResponse> {
-  return instance.get('/cars').then((res) => res.data);
+export function getCars(
+  page: number,
+  color: string | undefined,
+  manufacturer: string | undefined,
+): Promise<GetCarsResponse> {
+  return instance
+    .get('/cars', { params: { page, color, manufacturer } })
+    .then((res) => res.data);
 }
 
 export function getCar(stockNumber: number): Promise<Car | undefined> {
