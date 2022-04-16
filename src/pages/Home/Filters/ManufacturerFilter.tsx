@@ -1,5 +1,5 @@
 import React from 'react';
-import { useData } from '../../../hooks/useData';
+import { useData } from '../../../utils/useData';
 import { getManufacturers } from '../../../api/api';
 import UseDataLayout from '../../../components/DataLayout';
 import { Manufacturer } from '../../../types/Manufacturer';

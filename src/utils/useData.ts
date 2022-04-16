@@ -63,7 +63,6 @@ export function useData<T>(
     useDataReducer,
     initialState,
   );
-
   useEffect(() => {
     dispatch({ type: UseDataAction.Fetching });
     fn()

@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { Grid, Typography } from '@mui/material';
-import { useData } from '../../hooks/useData';
+import { useData } from '../../utils/useData';
 import { getCars } from '../../api/api';
 import { scrollToTop } from '../../utils/scrollToTop';
 import UseDataLayout from '../../components/DataLayout';
@@ -23,7 +23,7 @@ const Cars = () => {
     () => getCars(page, color, manufacturer),
     [page, color, manufacturer],
   );
-  const carsState = useData(fetchCars, [fetchCars]);
+  const carsState = useData(fetchCars);
   return (
     <Grid container direction="column" spacing={3}>
       <Grid item>

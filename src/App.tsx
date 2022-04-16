@@ -3,7 +3,7 @@ import { CssBaseline, Divider, ThemeProvider } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
 import { theme } from './theme/theme';
 import Home from './pages/Home/Home';
-import CarDetails from './pages/CarDetails';
+import CarDetails from './pages/CarDetails/CarDetails';
 import NotFound from './pages/NotFound';
 import Header from './layout/Header';
 import Footer from './layout/Footer';

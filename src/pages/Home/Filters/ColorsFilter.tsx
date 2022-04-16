@@ -1,6 +1,6 @@
 import React from 'react';
 import { CircularProgress } from '@mui/material';
-import { useData } from '../../../hooks/useData';
+import { useData } from '../../../utils/useData';
 import { getColors } from '../../../api/api';
 import UseDataLayout from '../../../components/DataLayout';
 import Filter from './Filter';

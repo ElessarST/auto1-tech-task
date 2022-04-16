@@ -1,5 +1,5 @@
 import React from 'react';
-import { UseData } from '../hooks/useData';
+import { UseData } from '../utils/useData';
 import { Typography } from '@mui/material';
 
 type Props<T> = {
