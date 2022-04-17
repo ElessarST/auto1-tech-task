@@ -18,7 +18,8 @@ const ColorsFilter: React.FC<Props> = ({ value, onChange }) => {
     <UseDataLayout<CarColor[]>
       useDataState={manufacturersState}
       errorMsg="Failed to load colors options"
-      loadingComponent={<CircularProgress />}>
+      loadingComponent={<CircularProgress />}
+    >
       {(colors) => (
         <Filter
           value={value}

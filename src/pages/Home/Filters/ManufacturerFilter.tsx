@@ -17,7 +17,8 @@ const ManufacturerFilter: React.FC<Props> = ({ value, onChange }) => {
     <UseDataLayout<Manufacturer[]>
       useDataState={manufacturersState}
       errorMsg="Failed to load manufacturer options"
-      loadingComponent={<CircularProgress />}>
+      loadingComponent={<CircularProgress />}
+    >
       {(manufacturers) => (
         <Filter
           value={value}

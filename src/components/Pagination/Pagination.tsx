@@ -23,7 +23,8 @@ const Pagination: React.FC<Props> = ({ page, pageCount, onPageChange }) => {
       <Grid item>
         <PaginationButton
           disabled={!hasPrev}
-          onClick={() => onPageChange(page - 1)}>
+          onClick={() => onPageChange(page - 1)}
+        >
           Previous
         </PaginationButton>
       </Grid>
@@ -33,14 +34,16 @@ const Pagination: React.FC<Props> = ({ page, pageCount, onPageChange }) => {
       <Grid item>
         <PaginationButton
           disabled={!hasNext}
-          onClick={() => onPageChange(page + 1)}>
+          onClick={() => onPageChange(page + 1)}
+        >
           Next
         </PaginationButton>
       </Grid>
       <Grid item>
         <PaginationButton
           disabled={isLast}
-          onClick={() => onPageChange(pageCount)}>
+          onClick={() => onPageChange(pageCount)}
+        >
           Last
         </PaginationButton>
       </Grid>

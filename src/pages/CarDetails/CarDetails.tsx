@@ -21,7 +21,8 @@ const CarDetails = () => {
     <UseDataLayout<Car>
       useDataState={carData}
       loadingComponent={<CircularProgress />}
-      errorMsg="Failed to fetch car info">
+      errorMsg="Failed to fetch car info"
+    >
       {(car) => (
         <Grid container direction="column" spacing={3} alignItems="center">
           <Grid item>

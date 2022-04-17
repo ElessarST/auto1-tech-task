@@ -24,7 +24,8 @@ const CarFavorites: React.FC<Props> = ({ car }) => {
             variant="contained"
             color="primary"
             disableElevation
-            onClick={toggleFavorite}>
+            onClick={toggleFavorite}
+          >
             {isFavorite ? 'Delete' : 'Save'}
           </Button>
         </Grid>

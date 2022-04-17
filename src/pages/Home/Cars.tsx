@@ -35,7 +35,8 @@ const Cars = () => {
         <UseDataLayout<GetCarsResponse>
           useDataState={carsState}
           errorMsg="Failed to fetch cars"
-          loadingComponent={<CarsListLoading />}>
+          loadingComponent={<CarsListLoading />}
+        >
           {(data) => (
             <CarsContent
               cars={data.cars}

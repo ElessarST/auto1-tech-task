@@ -8,7 +8,8 @@ const Footer = () => (
     justifyContent="center"
     alignItems="center"
     sx={(theme) => ({ height: FOOTER_SIZE, padding: theme.spacing(3) })}
-    component="footer">
+    component="footer"
+  >
     <Typography variant="caption">&copy; AUTO1 Group 2022</Typography>
   </Grid>
 );

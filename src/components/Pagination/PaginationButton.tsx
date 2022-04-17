@@ -16,7 +16,8 @@ const PaginationButton: React.FC<PropsWithChildren<Props>> = ({
       variant="text"
       color="primary"
       onClick={onClick}
-      disabled={disabled}>
+      disabled={disabled}
+    >
       {children}
     </Button>
   );

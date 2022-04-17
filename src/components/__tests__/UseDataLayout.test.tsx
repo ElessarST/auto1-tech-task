@@ -11,7 +11,8 @@ function renderUseDataLayout(state: UseData<string>) {
     <UseDataLayout<string>
       useDataState={state}
       loadingComponent={<span>{LOADING}</span>}
-      errorMsg={ERROR}>
+      errorMsg={ERROR}
+    >
       {(data) => <span>{data}</span>}
     </UseDataLayout>,
   );

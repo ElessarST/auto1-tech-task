@@ -7,7 +7,8 @@ const Main: React.FC<PropsWithChildren<{}>> = ({ children }) => (
     sx={(theme) => ({
       minHeight: `calc(100vh - ${HEADER_SIZE + FOOTER_SIZE}px)`,
       padding: theme.spacing(3),
-    })}>
+    })}
+  >
     {children}
   </Box>
 );

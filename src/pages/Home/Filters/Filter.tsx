@@ -19,7 +19,8 @@ const Filter: React.FC<Props> = ({ onChange, options, value, label }) => {
         id={id}
         value={value}
         label={label}
-        onChange={(e) => onChange(e.target.value as string)}>
+        onChange={(e) => onChange(e.target.value as string)}
+      >
         {options.map((option) => (
           <MenuItem value={option} key={option}>
             {option}

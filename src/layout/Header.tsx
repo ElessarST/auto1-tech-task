@@ -12,7 +12,8 @@ const Header = () => {
       justifyContent="space-between"
       alignItems="center"
       sx={(theme) => ({ height: HEADER_SIZE, padding: theme.spacing(3) })}
-      component="header">
+      component="header"
+    >
       <Grid item>
         <Link to="/">
           <Logo />
