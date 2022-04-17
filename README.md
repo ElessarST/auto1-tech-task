@@ -2,6 +2,10 @@
 
 Technical task implementation for Auto1
 
+## Deployed version
+
+https://chipper-tarsier-c7104a.netlify.app/
+
 ## Available Scripts
 
 ### `yarn start`
