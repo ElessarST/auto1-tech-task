@@ -9,9 +9,7 @@ type Props = {
 };
 
 const CarFavorites: React.FC<Props> = ({ car }) => {
-  const { isFavorite, toggleFavorite } = useFavorites(
-    car.stockNumber.toString(),
-  );
+  const { isFavorite, toggleFavorite } = useFavorites(car.stockNumber);
   return (
     <Card>
       <Grid container direction="column" spacing={3}>

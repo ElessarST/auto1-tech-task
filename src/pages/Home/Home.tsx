@@ -2,11 +2,11 @@ import React from 'react';
 import { Container, Grid } from '@mui/material';
 import Cars from './Cars';
 import Filters from './Filters/Filters';
-import { FiltersProvider } from './Filters/FiltersContext';
+import { CarsStateProvider } from './CarsState';
 
 const Home = () => {
   return (
-    <FiltersProvider>
+    <CarsStateProvider>
       <Container>
         <Grid container spacing={3}>
           <Grid item>
@@ -17,7 +17,7 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
-    </FiltersProvider>
+    </CarsStateProvider>
   );
 };
 

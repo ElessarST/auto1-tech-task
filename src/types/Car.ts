@@ -14,7 +14,7 @@ export type Mileage = {
 };
 
 export type Car = {
-  stockNumber: string;
+  stockNumber: number;
   manufacturerName: string;
   modelName: string;
   color: string;

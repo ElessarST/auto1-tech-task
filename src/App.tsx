@@ -1,5 +1,5 @@
 import React from 'react';
-import { CssBaseline, Divider, ThemeProvider } from '@mui/material';
+import { Box, CssBaseline, Divider, ThemeProvider } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
 import { theme } from './theme/theme';
 import Home from './pages/Home/Home';
@@ -8,13 +8,12 @@ import NotFound from './pages/NotFound';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Main from './layout/Main';
-import LayoutWrapper from './layout/LayoutWrapper';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <LayoutWrapper>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <Header />
         <Divider variant="fullWidth" />
         <Main>
@@ -26,7 +25,7 @@ function App() {
         </Main>
         <Divider variant="fullWidth" />
         <Footer />
-      </LayoutWrapper>
+      </Box>
     </ThemeProvider>
   );
 }

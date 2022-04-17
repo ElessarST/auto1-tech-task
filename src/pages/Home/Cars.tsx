@@ -1,17 +1,17 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import { Grid, Typography } from '@mui/material';
 import { useData } from '../../utils/useData';
 import { getCars } from '../../api/api';
 import { scrollToTop } from '../../utils/scrollToTop';
-import UseDataLayout from '../../components/DataLayout';
+import UseDataLayout from '../../components/UseDataLayout';
 import CarsListLoading from '../../components/CarsList/CarsListItemLoading';
 import { GetCarsResponse } from '../../api/types';
 import CarsContent from './CarsContent';
-import { useFilters } from './Filters/FiltersContext';
+import { useCarsState } from './CarsState';
 
 const Cars = () => {
-  const [page, setPage] = useState(1);
-  const { color, manufacturer } = useFilters();
+  const { color, manufacturer, page, setPage } = useCarsState();
+
   const onPageChange = useCallback(
     (newPage: number) => {
       scrollToTop();
@@ -19,10 +19,12 @@ const Cars = () => {
     },
     [setPage],
   );
+
   const fetchCars = useCallback(
     () => getCars(page, color, manufacturer),
     [page, color, manufacturer],
   );
+
   const carsState = useData(fetchCars);
   return (
     <Grid container direction="column" spacing={3}>

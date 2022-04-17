@@ -16,21 +16,20 @@ function setStoredValue(value: string[]) {
   localStorage.setItem(FAVORITE_KEY, value.join(VALUE_SEPARATOR));
 }
 
-export function useFavorites(stockNumber: string): UseFavorites {
+export function useFavorites(stockNumber: number): UseFavorites {
+  const stock = stockNumber.toString();
   const storedFavorites = getStoredValue();
-  const [isFavorite, setFavorite] = useState(
-    storedFavorites.includes(stockNumber),
-  );
+  const [isFavorite, setFavorite] = useState(storedFavorites.includes(stock));
 
   const toggleFavorite = useCallback(() => {
     const newFavorite = !isFavorite;
     const storedValues = getStoredValue();
     setFavorite(newFavorite);
     const newStoredFavorites = newFavorite
-      ? [...storedValues, stockNumber]
-      : storedValues.filter((storedStock) => storedStock !== stockNumber);
+      ? [...storedValues, stock]
+      : storedValues.filter((storedStock) => storedStock !== stock);
     setStoredValue(newStoredFavorites);
-  }, [isFavorite, stockNumber, setFavorite]);
+  }, [isFavorite, stock, setFavorite]);
 
   return { isFavorite, toggleFavorite };
 }

@@ -3,7 +3,7 @@ import { CircularProgress, Container, Grid } from '@mui/material';
 import { useData } from '../../utils/useData';
 import { getCar } from '../../api/api';
 import { useParams } from 'react-router-dom';
-import UseDataLayout from '../../components/DataLayout';
+import UseDataLayout from '../../components/UseDataLayout';
 import { Car } from '../../types/Car';
 import CarInfo from './CarInfo';
 import CarFavorites from './CarFavorites';

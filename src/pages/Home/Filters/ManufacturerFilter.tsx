@@ -1,7 +1,7 @@
 import React from 'react';
 import { useData } from '../../../utils/useData';
 import { getManufacturers } from '../../../api/api';
-import UseDataLayout from '../../../components/DataLayout';
+import UseDataLayout from '../../../components/UseDataLayout';
 import { Manufacturer } from '../../../types/Manufacturer';
 import { CircularProgress } from '@mui/material';
 import Filter from './Filter';

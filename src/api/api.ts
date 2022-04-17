@@ -26,12 +26,9 @@ export function getCars(
 }
 
 export function getCar(stockNumber: string | undefined): Promise<Car> {
-  return (
-    instance
-      .get<GetCarResponse>(`/cars/${stockNumber}`)
-      // @ts-ignore
-      .then((res) => res.data?.car)
-  );
+  return instance
+    .get<GetCarResponse>(`/cars/${stockNumber}`)
+    .then((res) => res.data?.car);
 }
 
 export function getColors(): Promise<CarColor[]> {
