@@ -17,12 +17,15 @@ export const Loading: React.FC<Props> = ({ width, height }) => (
   />
 );
 
+const LIST_ITEM_WIDTH = 300;
+const LIST_ITEM_HEIGHT = 15;
+
 const CarsListItemLoading = () => (
   <CarsListItemLayout
     img={<Loading />}
-    title={<Loading width={300} height={30} />}
-    description={<Loading width={300} height={15} />}
-    link={<Loading width={150} height={15} />}
+    title={<Loading width={LIST_ITEM_WIDTH} height={LIST_ITEM_HEIGHT * 2} />}
+    description={<Loading width={LIST_ITEM_WIDTH} height={LIST_ITEM_HEIGHT} />}
+    link={<Loading width={LIST_ITEM_WIDTH / 2} height={LIST_ITEM_HEIGHT} />}
   />
 );
 

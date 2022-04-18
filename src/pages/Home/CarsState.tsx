@@ -6,6 +6,8 @@ import React, {
   useState,
 } from 'react';
 
+const INITIAL_PAGE = 1;
+
 export type CarsStateProps = {
   page: number;
   color: string;
@@ -16,7 +18,7 @@ export type CarsStateProps = {
 };
 
 export const CarsState = React.createContext<CarsStateProps>({
-  page: 1,
+  page: INITIAL_PAGE,
   color: '',
   manufacturer: '',
   setColor: () => null,
@@ -30,7 +32,7 @@ export const CarsStateProvider: React.FC<PropsWithChildren<{}>> = ({
   const [carsState, setCarsState] = useState({
     color: '',
     manufacturer: '',
-    page: 1,
+    page: INITIAL_PAGE,
   });
   const onChangeBase = useCallback(
     (update: Partial<typeof carsState>) => {
@@ -42,11 +44,12 @@ export const CarsStateProvider: React.FC<PropsWithChildren<{}>> = ({
     [setCarsState],
   );
   const setColor = useCallback(
-    (color: string) => onChangeBase({ color, page: 1 }),
+    (color: string) => onChangeBase({ color, page: INITIAL_PAGE }),
     [onChangeBase],
   );
   const setManufacturer = useCallback(
-    (manufacturer: string) => onChangeBase({ manufacturer, page: 1 }),
+    (manufacturer: string) =>
+      onChangeBase({ manufacturer, page: INITIAL_PAGE }),
     [onChangeBase],
   );
   const setPage = useCallback(
