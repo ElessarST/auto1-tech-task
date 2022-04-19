@@ -1,6 +1,6 @@
-# Auto1 Technical Task
+# Technical Task
 
-Technical task implementation for Auto1
+Technical task implementation
 
 ## Deployed version
 
